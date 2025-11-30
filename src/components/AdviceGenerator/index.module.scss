@@ -1,4 +1,6 @@
 .container {
+    margin: 0 auto;
+    width: min(100%, calc(540 / 16 * 1rem));
     container-type: inline-size;
 }
 
