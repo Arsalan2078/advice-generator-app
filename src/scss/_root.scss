@@ -1,0 +1,19 @@
+:root {
+    // colors
+    --clr-white: rgb(255, 255, 255);
+    --clr-black: rgb(0, 0, 0);
+    --clr-green: rgb(83, 255, 170);
+
+    --clr-blue-950: rgb(32, 39, 51);
+    --clr-blue-900: rgb(49, 58, 72);
+    --clr-blue-600: rgb(79, 93, 116);
+    --clr-blue-200: rgb(206, 227, 233);
+
+    // root styles
+    background-color: var(--clr-blue-950);
+    color: var(--clr-blue-200);
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    line-height: 1.35;
+}
