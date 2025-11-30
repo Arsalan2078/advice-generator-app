@@ -5,6 +5,11 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(2rem, 1.1294rem + 4.0609cqw, 2.5rem);
+
     border-radius: clamp(0.625rem, 0.0809rem + 2.5381cqw, 0.9375rem);
     padding-inline: clamp(1.4688rem, -1.1973rem + 12.4365cqw, 3rem);
     padding-block-start: clamp(2.5rem, 1.6294rem + 4.0609cqw, 3rem);
@@ -12,4 +17,24 @@
     background-color: var(--clr-blue-900);
     box-shadow: calc(30 / 16 * 1rem) calc(50 / 16 * 1rem) calc(80 / 16 * 1rem) 0
         rgb(from var(--clr-black) r g b / 0.1);
+
+    > *:last-child {
+        margin-block-end: -2rem;
+    }
+}
+
+.content {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: clamp(1rem, 0.1294rem + 4.0609cqw, 1.5rem);
+}
+
+.divider {
+    max-width: 100%;
+    content: url("/images/pattern-divider-mobile.svg");
+
+    @container (min-width: calc(540 / 16 * 1rem)) {
+        content: url("/images/pattern-divider-desktop.svg");
+    }
 }

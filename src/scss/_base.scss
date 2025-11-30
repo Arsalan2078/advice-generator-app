@@ -1,4 +1,8 @@
 @layer {
+    img {
+        display: block;
+    }
+
     blockquote {
         &::before {
             content: open-quote;

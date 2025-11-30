@@ -7,10 +7,16 @@ export default function AdviceGenerator() {
     return (
         <div className={css.container}>
             <div className={css.card}>
-                <AdviceNumber number={0} />
-                <AdviceText text={"Lorem ipsum dolor sigma gigachad."} />
+                <div className={css.content}>
+                    <AdviceNumber number={117} />
+                    <AdviceText
+                        text={
+                            "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+                        }
+                    />
+                </div>
 
-                <hr />
+                <hr className={css.divider} />
 
                 <AdviceButton />
             </div>
