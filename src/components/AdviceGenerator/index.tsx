@@ -2,18 +2,25 @@ import AdviceButton from "../AdviceButton";
 import AdviceNumber from "../AdviceNumber";
 import AdviceText from "../AdviceText";
 import css from "./index.module.scss";
+import type { AdviceSlipProps } from "../../libs/types";
+import { useFetch } from "../../libs/hooks";
+import { ADVICE_SLIP_API_URL } from "../../libs/constants";
 
 export default function AdviceGenerator() {
+    const { data, isLoading } = useFetch<AdviceSlipProps>(ADVICE_SLIP_API_URL);
+
     return (
         <div className={css.container}>
             <div className={css.card}>
                 <div className={css.content}>
-                    <AdviceNumber number={117} />
-                    <AdviceText
-                        text={
-                            "It is easy to sit up and take notice, what's difficult is getting up and taking action."
-                        }
-                    />
+                    {isLoading && <p>Loading...</p>}
+
+                    {data && (
+                        <>
+                            <AdviceNumber number={data.slip.id} />
+                            <AdviceText text={data.slip.advice} />
+                        </>
+                    )}
                 </div>
 
                 <hr className={css.divider} />
