@@ -1,0 +1,13 @@
+.container {
+    container-type: inline-size;
+}
+
+.card {
+    border-radius: clamp(0.625rem, 0.0809rem + 2.5381cqw, 0.9375rem);
+    padding-inline: clamp(1.4688rem, -1.1973rem + 12.4365cqw, 3rem);
+    padding-block-start: clamp(2.5rem, 1.6294rem + 4.0609cqw, 3rem);
+
+    background-color: var(--clr-blue-900);
+    box-shadow: calc(30 / 16 * 1rem) calc(50 / 16 * 1rem) calc(80 / 16 * 1rem) 0
+        rgb(from var(--clr-black) r g b / 0.1);
+}
