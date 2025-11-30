@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 99rem;
+    width: 4rem;
+    aspect-ratio: 1;
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+
+    --color: var(--clr-green);
+    background-color: var(--color);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 calc(40 / 16 * 1rem) 0 var(--color);
+    }
+
+    &:active {
+        --color: var(--clr-white);
+        transition-duration: 0s;
+    }
+}
