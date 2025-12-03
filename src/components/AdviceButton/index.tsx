@@ -3,11 +3,12 @@ import image from "/images/icon-dice.svg";
 
 type Props = {
     onClick?: () => void;
+    disabled: boolean;
 };
 
-export default function AdviceButton({ onClick }: Props) {
+export default function AdviceButton({ onClick, disabled }: Props) {
     return (
-        <button className={css.button} onClick={onClick}>
+        <button className={css.button} onClick={onClick} disabled={disabled}>
             <img
                 src={image}
                 width="24"

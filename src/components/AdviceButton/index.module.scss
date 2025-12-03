@@ -23,4 +23,8 @@
         --color: var(--clr-white);
         transition-duration: 0s;
     }
+
+    &:disabled {
+        opacity: 0.5;
+    }
 }
